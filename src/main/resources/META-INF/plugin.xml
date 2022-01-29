@@ -9,6 +9,12 @@
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.jandadav.intellijplugin.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.jandadav.intellijplugin.services.MyProjectService"/>
+
+        <applicationService serviceImplementation="com.github.jandadav.intellijplugin.settings.AppSettingsState"/>
+
+        <applicationConfigurable parentId="tools" instance="com.github.jandadav.intellijplugin.settings.AppSettingsConfigurable"
+                                 id="org.intellij.sdk.settings.AppSettingsConfigurable"
+                                 displayName="SDK: Application Settings Example"/>
     </extensions>
 
     <applicationListeners>
