@@ -15,6 +15,13 @@
         <applicationConfigurable parentId="tools" instance="com.github.jandadav.intellijplugin.settings.AppSettingsConfigurable"
                                  id="org.intellij.sdk.settings.AppSettingsConfigurable"
                                  displayName="SDK: Application Settings Example"/>
+
+
+        <toolWindow id="Intellij Plugin"
+                    secondary="false"
+                    anchor="left"
+                    factoryClass="com.github.jandadav.intellijplugin.ui.MainToolWindowFactory"/>
+
     </extensions>
 
     <applicationListeners>
