@@ -16,6 +16,7 @@
                                  id="org.intellij.sdk.settings.AppSettingsConfigurable"
                                  displayName="SDK: Application Settings Example"/>
 
+        <diff.DiffExtension implementation="com.github.jandadav.intellijplugin.diff.MainDiffExtension"/>
 
         <toolWindow id="Intellij Plugin"
                     secondary="false"
