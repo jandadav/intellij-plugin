@@ -8,9 +8,14 @@ import com.intellij.ui.content.ContentFactory
 class MainToolWindowFactory: ToolWindowFactory {
 
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
-        val mainToolWindow = MainToolWindow()
+        /*val mainToolWindow = MainToolWindow(project)
         val contentFactory = ContentFactory.SERVICE.getInstance()
         val content = contentFactory.createContent(mainToolWindow.getPanel(), "", false)
+        toolWindow.getContentManager().addContent(content)*/
+
+        val mainToolWindow = MainJavaWindow(project)
+        val contentFactory = ContentFactory.SERVICE.getInstance()
+        val content = contentFactory.createContent(mainToolWindow.createComponent(), "AAA", false)
         toolWindow.getContentManager().addContent(content)
 
     }
